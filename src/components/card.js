@@ -38,7 +38,8 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                                 </div>
                               <div className="link">
                                 <h1>Liens :</h1>
-                                <a href={link}>Lien site web</a><a href={github}>Lien github</a></div>
+                                {link.length > 0 && <a href={link}>Lien site web</a> }
+                                {github.length >0 && <a href={github}>Lien github</a> }</div>
                             </div>
                              
                               
