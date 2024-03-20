@@ -5,7 +5,6 @@ import {Footer} from './components/footer';
 import { Home } from './pages/home';
 import { About } from './pages/about';
 import { Portfolio } from './pages/portfolio';
-import { Contact2 } from './pages/contact2';
 import { Contact } from './pages/contact';
  
 function App() {

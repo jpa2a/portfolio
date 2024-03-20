@@ -1,11 +1,29 @@
 //import { motion } from "framer-motion"
 import { useForm } from "react-hook-form"
-export function Contact(){
-    const { register, handleSubmit, formState: { errors }, } = useForm();
+import emailjs from '@emailjs/browser';
+import { useRef } from "react";
 
-    const onSubmit = data => {
+export function Contact(){
+    const form = useRef();
+    const { register, handleSubmit, formState: { errors, isSubmitting }, } = useForm();
+
+    const onSubmit = async data => {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         console.log(data);
 
+        emailjs
+      .sendForm('service_7kqj65m', 'template_4koei1w', form.current, {
+        publicKey: 'xxxx',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+ 
     }
 
     return <>
@@ -13,10 +31,10 @@ export function Contact(){
  
         <div className="contact__info">
             <h2>Contact</h2>
-             <form onSubmit={ handleSubmit(onSubmit)}>
+             <form ref={form} onSubmit={ handleSubmit(onSubmit)}>
             <div className="contact__nom">
                 <label>Nom</label>
-                <input {...register("nom", {required: "le nom doit etre renseigné", minLength: {value: 3, message: "le nom doit avoir au moins 3 caractères",},})} type="text" />
+                <input name="user_name" {...register("nom", {required: "le nom doit etre renseigné", minLength: {value: 3, message: "le nom doit avoir au moins 3 caractères",},})} type="text" />
                 {errors.nom && <div className="form__error">{errors.nom.message}</div>}
             </div>
             <div className="contact__prenom">
@@ -38,7 +56,7 @@ export function Contact(){
                 <textarea {...register("message", {required: "un message est obligatoire", minLength: {value: 20, message: "le message doit avoir au moins 20 caractères",},})} rows="3" />
                 {errors.message && <div className="form__error">{errors.message.message}</div>}
             </div>
-    <button type="submit" className="contact__submit"> Envoyer </button>
+    <button disabled={isSubmitting} type="submit" className="contact__submit">{isSubmitting ? "Envoi ..." : "Envoyer"}</button>
   </form>
 </div>
     </main>
