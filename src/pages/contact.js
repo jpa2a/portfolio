@@ -1,53 +1,44 @@
-import { motion } from "framer-motion"
-
+//import { motion } from "framer-motion"
+import { useForm } from "react-hook-form"
 export function Contact(){
-    
+    const { register, handleSubmit, formState: { errors }, } = useForm();
+
+    const onSubmit = data => {
+        console.log(data);
+
+    }
 
     return <>
        <main className="contact">
-  {/*       <div>
-        <div className="contact">
-        <form action="#" method="post" className="form">
-            <label htmlFor="firstName"></label>
-            <input type="text" name="firstName" id="firstName" placeholder="Nom" />
-            <label htmlFor="lastName"></label>
-            <input type="text" name="lastName" id="lastName" placeholder="Prenom" />
-            <label htmlFor="email"></label>
-            <input type="email" name="email" id="email" placeholder="Email" />
-            <label htmlFor="message"></label>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" ></textarea>
-            <button>Envoyer</button>
-		    </form>
-
-        </div>
-      
-        </div> */}
-        <div className="login-box">
+ 
+        <div className="contact__info">
             <h2>Contact</h2>
-             <form>
-            <div className="user-box">
-                <input type="text" name="" required="" />
+             <form onSubmit={ handleSubmit(onSubmit)}>
+            <div className="contact__nom">
                 <label>Nom</label>
+                <input {...register("nom", {required: "le nom doit etre renseigné", minLength: {value: 3, message: "le nom doit avoir au moins 3 caractères",},})} type="text" />
+                {errors.nom && <div className="form__error">{errors.nom.message}</div>}
             </div>
-            <div className="user-box">
-                <input type="text" name="" required="" />
+            <div className="contact__prenom">
                 <label>Prenom</label>
+                <input {...register("prenom", {required: "le prénom doit etre renseigné", minLength: {value: 3, message: "le prenom doit avoir au moins 3 caractères",},})} type="text" />
+                {errors.prenom && <div className="form__error">{errors.prenom.message}</div>}
             </div>
-            <div className="user-box">
-                <input type="email" name="" required="" />
+            <div className="contact__email">
                 <label>Email</label>
+                <input {...register("email", {required: "email obligatoire",pattern: {
+      value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+      message: 'email addresse invalide',
+    },})} type="text" />
+                {errors.email && <div className="form__error">{errors.email.message}</div>}
+                
             </div>
-            <div className="user-box">
-                <textarea rows="4" name="" required="" />
+            <div className="contact__message">
                 <label>Message</label>
+                <textarea {...register("message", {required: "un message est obligatoire", minLength: {value: 20, message: "le message doit avoir au moins 20 caractères",},})} rows="3" />
+                {errors.message && <div className="form__error">{errors.message.message}</div>}
             </div>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Envoyer
-    </a>
+    <button type="submit" className="contact__submit"> Envoyer </button>
   </form>
 </div>
     </main>

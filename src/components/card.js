@@ -34,10 +34,10 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                                 </div>
                               <div className="description">
                                 <h1>Description :</h1>
-                                {description}
+                                <span>{description}</span>
                                 </div>
                               <div className="link">
-                                <h1>Liens :</h1>
+                                
                                 {link.length > 0 && <a href={link}>Lien site web</a> }
                                 {github.length >0 && <a href={github}>Lien github</a> }</div>
                             </div>
