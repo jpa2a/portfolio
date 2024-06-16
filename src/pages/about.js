@@ -16,9 +16,6 @@ export function About(){
             opacity: 1,
             x: '0',
           }}
-         /*  exit={{
-            x: '+140%',
-          }} */
           transition={{
             duration: 2,
           }}
@@ -48,9 +45,6 @@ export function About(){
             opacity: 1,
             x: '0',
           }}
-         /*  exit={{
-            x: '+140%',
-          }} */
           transition={{
             duration: 2,
           }}

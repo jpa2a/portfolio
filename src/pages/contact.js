@@ -2,8 +2,33 @@
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Contact(){
+
+    const success = () => toast.success('message envoyé !', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
+    const failure = () => toast.error('erreur !', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
     const form = useRef();
     const { register, handleSubmit, formState: { errors, isSubmitting }, } = useForm();
 
@@ -13,14 +38,28 @@ export function Contact(){
 
         emailjs
       .sendForm('service_7kqj65m', 'template_4koei1w', form.current, {
-        publicKey: 'xxxx',
+        publicKey: '1Rdl_sHekOVNNfZnr',
       })
       .then(
-        () => {
-          console.log('SUCCESS!');
+        (response) => {
+          if (response.status === 200) {
+            return <>
+              {success()}
+            </>;
+
+          }
+          else{
+            return <>
+              {failure()}
+            </>;
+          }
+          
+          
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          return <>
+          {failure()}
+        </>;
         },
       );
  
@@ -28,13 +67,15 @@ export function Contact(){
 
     return <>
        <main className="contact">
- 
+        <div className="popup">
+
+        </div>
         <div className="contact__info">
             <h2>Contact</h2>
              <form ref={form} onSubmit={ handleSubmit(onSubmit)}>
             <div className="contact__nom">
                 <label>Nom</label>
-                <input name="user_name" {...register("nom", {required: "le nom doit etre renseigné", minLength: {value: 3, message: "le nom doit avoir au moins 3 caractères",},})} type="text" />
+                <input {...register("nom", {required: "le nom doit etre renseigné", minLength: {value: 3, message: "le nom doit avoir au moins 3 caractères",},})} type="text" />
                 {errors.nom && <div className="form__error">{errors.nom.message}</div>}
             </div>
             <div className="contact__prenom">
@@ -60,5 +101,6 @@ export function Contact(){
   </form>
 </div>
     </main>
+    <ToastContainer />
     </>
   }

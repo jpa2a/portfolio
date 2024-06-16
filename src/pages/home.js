@@ -7,7 +7,6 @@ export function Home(){
     return <>
        <main className="hero">
         <div>
-       {/*  <div className="div-tab">Home</div> */}
        <motion.div
          initial={{
             opacity: 0,
