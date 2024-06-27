@@ -1,0 +1,40 @@
+footer {
+  padding-block: 1.38rem;
+  padding-inline: 10%;
+  background-color: #353535;
+  color: white;
+}
+@media (min-width: 1024px) {
+  footer {
+    position: relative;
+  }
+  footer p {
+    display: inline-block;
+    margin-inline: 10px;
+  }
+  footer .footer__logo {
+    position: absolute;
+    Right: 40px;
+  }
+  footer .footer__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 50px;
+  }
+}
+footer h3 {
+  font-family: "Shrikhand";
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+footer i {
+  margin-right: 0.69rem;
+}
+footer p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+footer a {
+  color: white;
+}/*# sourceMappingURL=footer.css.map */

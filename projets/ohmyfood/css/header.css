@@ -1,0 +1,56 @@
+/** HEADER CONTENANT LE LOGO + LA LOCALISATION ***/
+/* bouton retour de la partie restaurant */
+.return-home {
+  position: absolute;
+  z-index: 5;
+  left: 20px;
+  font-size: 1.2rem;
+}
+
+/* -------------------------------------   */
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.88rem;
+  height: 3.93rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+header .logo img {
+  height: 2.75rem;
+  width: 10.12rem;
+}
+@media (min-width: 768px) {
+  header .logo {
+    height: 6rem;
+    padding-top: 0;
+  }
+}
+header .localisation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 3.12rem;
+  background-color: #eaeaea;
+  color: #353535;
+  position: relative;
+  z-index: 1;
+}
+header .localisation .fa-location-dot {
+  margin: 1.06rem;
+  margin-left: 0px;
+  color: #353535;
+}/*# sourceMappingURL=header.css.map */

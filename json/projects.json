@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Kasa",
+        "description": "Creation website de location d'appartement en ligne sous React",
+        "deskImg": "./images/screens/p8_desk.png",
+        "mobileImg": "./images/screens/p8_mob.png",
+        "link": "",
+        "github": "https://github.com/jpa2a/projet_8",
+        "html": true,
+        "css": true,
+        "js": true,
+        "react": true
+      },
+      {
+        "title": "Oh my food",
+        "description": "Creation Website repertoriant les menus de restaurant permettant de commander en ligne",
+        "deskImg": "./images/screens/p4_desk.png",
+        "mobileImg": "./images/screens/p4_mob.png",
+        "link": "https://jpa2a.github.io/projets/ohmyfood/",
+        "github": "https://github.com/jpa2a/projet_4",
+        "html": true,
+        "css": true,
+        "js": false,
+        "react": false
+      },
+      {
+        "title": "Nina Carducci",
+        "description": "Optimisation SEO du sites de la photographe nina carducci",
+        "deskImg": "./images/screens/p9_desk.png",
+        "mobileImg": "./images/screens/p9_mob.png",
+        "link": "https://jpa2a.github.io/projets/nina/",
+        "github": "https://github.com/jpa2a/projet_9",
+        "html": true,
+        "css": true,
+        "js": true,
+        "react": false
+      },
+      {
+        "title": "Argent bank",
+        "description": "Creation des elements dynamique pour une banque en ligne",
+        "deskImg": "./images/screens/p11_desk.png",
+        "mobileImg": "./images/screens/p11_mob.png",
+        "link": "",
+        "github": "https://github.com/jpa2a/projet_11",
+        "html": true,
+        "css": true,
+        "js": true,
+        "react": true
+      },
+      {
+        "title": "Booki",
+        "description": "Creation d'une partie du site pour l'agence de location d'appartement booki",
+        "deskImg": "./images/screens/p3_desk.png",
+        "mobileImg": "./images/screens/p3_mob.png",
+        "link": "https://jpa2a.github.io/projets/booki/",
+        "github": "https://github.com/jpa2a/projet_3",
+        "html": true,
+        "css": true,
+        "js": false,
+        "react": false
+      }
+]

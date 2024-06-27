@@ -1,0 +1,93 @@
+/* liste des restaurants */
+.restaurants {
+  background-color: #f6f6f6;
+  padding-inline: 10%;
+}
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.restaurants__container__title {
+  display: flex;
+  width: 100%;
+}
+.restaurants__container__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4.15rem;
+}
+@media (min-width: 1024px) {
+  .restaurants__container__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1.88rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px;
+  position: relative;
+  background-color: white;
+  border-radius: 0.93rem;
+}
+.card--new {
+  position: absolute;
+  background-color: #99E2D0;
+  color: #008766;
+  padding-block: 0.44rem;
+  padding-inline: 0.62rem;
+  top: 0.81rem;
+  right: 1.08rem;
+  border-radius: 3px;
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 48%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 14.43rem;
+  border-top-left-radius: 0.93rem;
+  border-top-right-radius: 0.93rem;
+}
+.card__content {
+  height: 4.81rem;
+  padding-inline: 0.81rem;
+  padding-right: 1.56rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+.card__content__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card__content__text h2 {
+  margin-block: 0.31rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.card__content__text p {
+  margin-block: 0px;
+  font-size: 1.06rem;
+  font-weight: 300;
+  padding-bottom: 0.5rem;
+}
+.card__content__like {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=cards.css.map */

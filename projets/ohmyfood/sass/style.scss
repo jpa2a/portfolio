@@ -1,0 +1,175 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+
+@import "partials/variables";
+@import "partials/hero";
+@import "partials/cards";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/menu";
+
+
+
+
+* {
+	font-family: "Roboto";
+}
+body{
+    margin:0px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-container {
+	width: 100%;
+
+}
+
+/* LOADER  */
+
+  .loader {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    animation: loaderhide 1s 3s forwards;
+}
+    .loader::after{
+        content: "";
+        width: 120px;
+        height: 120px;
+        border: 16px solid $backgroundColor;
+        border-top: 16px solid $primaryColor;
+        border-radius: 50%;
+        animation: spin 3s ease 1 forwards;
+    }
+    
+ 
+  
+  @keyframes loaderhide {
+    0% {
+        opacity: 1;
+        }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        }
+  }
+  @keyframes spin {
+    0% {
+         transform: rotate(0deg); 
+        }
+
+    50%{
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(720deg); 
+        }
+  }
+
+  /* bouton */
+
+  .btn{
+    padding-block: 0.81rem;
+    padding-inline: 1.17rem;
+    border: none;
+    color: white;
+    background: linear-gradient(193deg, $primaryColor -11.44%, $secondaryColor 123.93%);
+    box-shadow:0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 500ms;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.85;
+        box-shadow:0px 4px 15px 0px rgba(0, 0, 0, 0.35); 
+        }
+    
+    }
+
+   /* Bouton like */
+
+   .heart--liked{
+    font-size: 25px;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(193deg, $primaryColor -11.44%, $secondaryColor 123.93%);
+}
+.heart--notliked{
+    font-size: 25px;
+    font-weight: 100;
+}
+.heart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20px;
+}
+.heart:hover .liked{
+    animation: heart--liked 200ms both;
+}
+.heart .liked{
+    animation: heart--notliked 200ms both;
+}
+.heart:hover .notliked{
+    animation: heart--notliked 200ms both;
+}
+
+
+.notliked{
+    position: absolute;
+    z-index: 3;
+}
+.liked{
+   position: absolute;
+    z-index: 4;
+    opacity: 0;
+
+}
+@keyframes heart--liked {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes heart--notliked {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(0.3);
+        opacity: 0;
+    }
+}
+
+ 
