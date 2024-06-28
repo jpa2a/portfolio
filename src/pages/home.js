@@ -7,6 +7,9 @@ export function Home(){
     return <>
        <main className="hero">
         <div>
+          {/* Utilisation de la librairie Framer motion pour l'animation de la div
+          herodiv
+          */}
        <motion.div
          initial={{
             opacity: 0,
@@ -24,12 +27,15 @@ export function Home(){
         <div className="herotext nom">ANDREANI</div>
         <div className="herotext prof">Intégrateur Web</div>
         <div className="hero__links">
-            <a className="hero__links__btn" href="cv.pdf">Download CV</a>
+            <a className="hero__links__btn" href="cv/CV.pdf" download="CV_Andreani_jean-paul">Download CV</a>
             <a className="hero__links__btn" href="#contact">Contact</a>
         </div>
        </motion.div>
        
         </div>
+        {/* Utilisation de la librairie Framer motion pour l'animation de la div
+          slide
+          */}
         <motion.div
         initial={{
          opacity: 0.5,

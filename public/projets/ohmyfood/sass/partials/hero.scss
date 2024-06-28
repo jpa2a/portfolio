@@ -1,0 +1,113 @@
+@import "variables";
+
+/** zone d'acceuil + bouton pour explorer les restaurants **/
+
+.explore__content, .valid{
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding-inline: 10%;
+    padding-bottom: 4rem;
+    
+    /* ----------------------------------------------------------- */
+    & h1{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2.44rem;
+    }
+    & p{
+        margin:0px;
+        margin-bottom: 3rem;
+        font-size: 1.125rem;
+        font-weight: 300;
+
+    }
+}
+
+/* guide de fonctionnement du site : choisissez un restaurant + composer menu + deguster */
+
+
+.guide{
+    padding-inline: 10%;
+    &__title{
+        display: flex;
+        width: 20.15rem;
+        justify-content: left;
+        @media (min-width: 1024px) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction:column;
+        justify-content:space-between;
+        @media (min-width: 1024px) {
+            justify-content:left;
+            flex-direction: row; 
+            gap: 2.28rem;  
+              
+        }
+        @media (min-width: 768px) {
+            flex-direction: row; 
+            gap: 2.28rem;  
+              
+        }
+        &__step{
+            position: relative;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: 4.52rem;
+            padding-right: 1rem;
+            width: min(95%, 20.15rem);
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); 
+            border-radius: 1.25rem;
+            margin-bottom: 1.56rem;
+            @media (min-width: 768px) {
+                width: max(30%, 20.15rem);
+                margin-bottom: 3.12rem;
+                  
+            }
+            @media (min-width: 1024px) {
+                width: 20.15rem;
+                margin-bottom: 3.12rem;
+                  
+            }
+            & .icons{
+                padding-left: 1.69rem;
+                padding-right: 1.1rem; 
+            }
+            & .fa-mobile-screen-button, .fa-list{
+                color: #7e7e7e;
+            }
+            & .fa-store{    
+                color: $primaryColor;
+            }
+            & h3{
+                margin: 0px;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+            & .number{
+                display: flex;
+                position: absolute;
+                left: -0.75rem;
+                background-color: $primaryColor;
+                color: white;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                font-size: 0.88rem;
+            }
+        }
+    }
+    
+}

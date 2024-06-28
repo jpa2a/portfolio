@@ -4,7 +4,6 @@ import { useRef } from 'react';
 export function Card({title, description, deskImg, mobileImg, link, github,html, css, js, react, progress, range, targetScale}){
     
     const scale = useTransform(progress, range, [1, targetScale]);
-    console.log(targetScale)
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
       target: container,
@@ -38,8 +37,8 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                                 </div>
                               <div className="link">
                                 
-                                {link.length > 0 && <a href={link}>Lien site web</a> }
-                                {github.length >0 && <a href={github}>Lien github</a> }</div>
+                                {link.length > 0 && <a href={link} target="_blank"  rel="noreferrer">Lien site web</a> }
+                                {github.length >0 && <a href={github} target="_blank"  rel="noreferrer">Lien github</a> }</div>
                             </div>
                              
                               

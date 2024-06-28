@@ -1,13 +1,9 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Menu } from "./menu" ;
+
 import { Navbar } from "./navbar";
 
 export function Header(){
 
     return <header>
-    {/*   <Menu /> */}
     <Navbar />
       <nav>
         <div>

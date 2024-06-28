@@ -1,4 +1,4 @@
-//import { motion } from "framer-motion"
+
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
@@ -66,6 +66,7 @@ export function Contact(){
     }
 
     return <>
+    <footer>
        <main className="contact">
         <div className="popup">
 
@@ -101,6 +102,7 @@ export function Contact(){
   </form>
 </div>
     </main>
+    </footer>
     <ToastContainer />
     </>
   }
