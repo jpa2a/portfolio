@@ -54,7 +54,11 @@ header{
            text-shadow: rgb(255, 255, 255) 1px 0 10px;
                 
             }
+            @media (max-width: 320px) {
+              font-size: 1.3rem;
+             }
         }
+       
     }
     .blue{
         color: rgb(12, 171, 200);
@@ -115,10 +119,10 @@ header{
    
     background-image: url("../public/images/desk.png");
   background-size: 100% auto;
+  background-size: cover;
   overflow: hidden;
+  background-repeat: no-repeat;
   @media (max-width: 1024px) {
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: right;
   }
   }
@@ -162,6 +166,9 @@ header{
   .hero .prenom{
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    @media (max-width: 375px) {
+      font-size: 1.5rem;
+    }
   }
   
   .hero .nom{
@@ -170,12 +177,18 @@ header{
     margin-top: 0;
     margin-bottom: 0.5rem;
     line-height: 2rem;
+    @media (max-width: 375px) {
+      font-size: 3.19rem;
+    }
   }
   
   .hero .prof{
     font-size: 2rem;
     font-stretch: 100%;
     letter-spacing: 5px;
+    @media (max-width: 375px) {
+      font-size: 1.5rem;
+    }
   }
 
   .about{
@@ -186,12 +199,16 @@ header{
    
     &__content{
     background: #0e1723;
+    font-size: 0.9rem;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
       height: 90%;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: 1024px) {
+        font-size: 0.8rem;
+       }
       @media (max-width: 640px) {
         flex-direction: column;
         justify-content: center;
@@ -207,8 +224,12 @@ header{
     border-radius: 5px;
     margin-inline: 100px;
      padding: 40px; 
+     @media (max-width: 1024px) {
+      margin-inline: 50px;
+      padding: 20px;
+     }
      @media (max-width: 640px) {
-      margin-top: 5rem;
+      margin-top: 0;
       width: 80%;
       font-size: 0.7rem;
       padding: 10px; 
@@ -219,11 +240,15 @@ header{
    
     margin-right: 150px;
     width: 40%;
+    @media (max-width: 1024px) {
+      margin-right: 50px;
+     }
     @media (max-width: 640px) {
       margin-top: 0.5rem;
       width: 80%;
       font-size: 0.7rem;
       margin-right: 0px;
+     
      }
     span{
       display: inline-block;
@@ -244,6 +269,10 @@ header{
       background: linear-gradient(to left, #243b55,#141e30);
       box-shadow:inset 0 15px 25px rgba(0,0,0,.6);
       border-radius: 15px;
+      @media (max-width: 640px) {
+        padding: 1rem;
+       
+       }
     }
     &__title{
       margin-bottom: 1.5rem;
@@ -252,7 +281,9 @@ header{
       text-decoration: underline;
       text-decoration-color: #03e9f4;
       text-underline-offset: 10px;
-      
+      @media (max-width: 640px) {
+       font-size: 1rem;
+       }
     }
   }
 
@@ -358,6 +389,7 @@ box-shadow: 0 15px 25px rgba(0,0,0,.6);
         position: relative;
         display: flex;
         align-items: center;
+        
         @media (max-width: 640px) {
           width: 90%;
          }
@@ -404,6 +436,7 @@ box-shadow: 0 15px 25px rgba(0,0,0,.6);
           text-decoration-color: #03e9f4;
           text-underline-offset: 10px;
           margin-block: 1rem;
+          white-space: nowrap;
           @media (max-width: 640px) {
             display: inline;
             margin-right: 0.5rem;
@@ -420,7 +453,7 @@ box-shadow: 0 15px 25px rgba(0,0,0,.6);
         a{
           background-color: #03e9f4;
           color: #0e1723;
-          padding-inline: 1rem;
+          padding-inline: 0.7rem;
           padding-block: 0.5rem;
           margin-right: 0.5rem;
           border-radius: 5px;
@@ -434,7 +467,7 @@ box-shadow: 0 15px 25px rgba(0,0,0,.6);
     .link{
       margin-top: 1rem;
       display: flex;
-      
+      white-space: nowrap;
       @media (max-width: 640px) {
         margin-top: 0.5rem;
         }
