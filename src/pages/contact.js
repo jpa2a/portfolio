@@ -45,8 +45,8 @@ export function Contact(){
           if (response.status === 200) {
             return <>
               {success()}
+              {reset()}
             </>;
-
           }
           else{
             return <>
