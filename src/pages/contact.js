@@ -30,7 +30,7 @@ export function Contact(){
         transition: Bounce,
         });
     const form = useRef();
-    const { register, handleSubmit, formState: { errors, isSubmitting }, } = useForm();
+    const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
 
     const onSubmit = async data => {
         await new Promise((resolve) => setTimeout(resolve, 1000));
