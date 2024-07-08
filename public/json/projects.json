@@ -37,7 +37,7 @@
       },
       {
         "title": "Argent bank",
-        "description": "Creation des elements dynamique pour une banque en ligne",
+        "description": "Creation des elements dynamique pour une banque en ligne avec gestion des états sous redux",
         "deskImg": "./images/screens/p11_desk.png",
         "mobileImg": "./images/screens/p11_mob.png",
         "link": "",
