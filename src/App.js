@@ -16,9 +16,9 @@ function App() {
       <About />
     </section>
       <Portfolio />
-    <section id='contact'>
+    <footer id='contact'>
        <Contact /> 
-    </section>
+    </footer>
  </>
   );
 }

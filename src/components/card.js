@@ -17,10 +17,10 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                          <div className="portfolio" ref={container}>
                           <motion.div className="portfolio__card"  style={{scale}}>
                             <div className="logos">
-                            {html && <div className="htmlLogo"><img src="./images/HTML5.png" alt="html"></img></div> }  
-                            {css && <div className="cssLogo"><img src="./images/css.png" alt="html"></img></div> }  
-                            {react && <div className="reactLogo"><img src="./images/React.png" alt="html"></img></div> }  
-                            {js && <div className="jsLogo"><img src="./images/JavaScript.png" alt="html"></img></div> }  
+                            {html && <div className="htmlLogo"><img src="./images/HTML5.webp" alt="html"></img></div> }  
+                            {css && <div className="cssLogo"><img src="./images/css.webp" alt="css"></img></div> }  
+                            {react && <div className="reactLogo"><img src="./images/React.webp" alt="react"></img></div> }  
+                            {js && <div className="jsLogo"><img src="./images/JavaScript.webp" alt="javascript"></img></div> }  
                             </div>
                             <div className="screenshots">
                               <div className="desk" style={{scale: imageScale}}><img src={deskImg} alt="portfolio 1 desk"></img></div>
@@ -28,11 +28,11 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                             </div>
                             <div className="text">
                               <div className="title">
-                                <h1>Projet :</h1>
+                                <h2>Projet :</h2>
                                 <span>{title}</span>
                                 </div>
                               <div className="description">
-                                <h1>Description :</h1>
+                                <h2>Description :</h2>
                                 <span>{description}</span>
                                 </div>
                               <div className="link">

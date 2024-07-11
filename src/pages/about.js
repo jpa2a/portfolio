@@ -27,7 +27,7 @@ export function About(){
         
         
             <div className="apropos__content">
-                  <h1>About</h1>
+                  <h2>About</h2>
                   <p>Passionné par le développement web, je suis un développeur
                      spécialisé en React permettant
                       la création d'applications web dynamiques et interactives.
