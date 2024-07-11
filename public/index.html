@@ -39,7 +39,7 @@
 
 
 <!-- schema pour referencement local -->
-
+<!-- 
 <script type="application/ld+json">
 	{
     "@context": "http://schema.org/",
@@ -53,10 +53,35 @@
         "postalCode": "20090",
         "streetAddress": "Residence Candia",
         "email": "jpandreani@gmail.com",
+        "url": "https://jpa2a.github.io/portfolio",
         "telephone": "0642423464"
     },
     "jobTitle": "developpeur Web",
     "image": "https://jpa2a.github.io/portfolio/images/jpa.webp"
+	  }  
+</script> -->
+
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		"image" : "https://jpa2a.github.io/portfolio/images/jpa.webp",
+		"name": "Jean-paul Andreani Portfolio",
+		"address": {
+		  "@type": "PostalAddress",
+		  "streetAddress": "Residence Candia",
+		  "addressLocality": "Ajaccio",
+		  "addressRegion": "Corse du sud",
+		  "postalCode": "20090",
+		  "addressCountry": "FR"
+		},
+		"author": {
+		  "@type": "Person",
+		  "name": "Jean-paul Andreani",
+      "jobTitle": "Developpeur Web"
+		},
+		"url": "https://jpa2a.github.io/portfolio",
+		"telephone": "+33642423464"
 	  }  
 </script>
  

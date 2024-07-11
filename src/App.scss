@@ -16,7 +16,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
+ /*  speak: never; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -101,7 +101,11 @@ header{
         span{
             font-weight: bold;
             font-size: 1.5rem;
+            @media (max-width: 320px) {
+              font-size: 1.2rem;
+             }
         }
+       
         .links a{
             margin-left: 1rem;
             font-size: 1.5rem;
@@ -110,9 +114,7 @@ header{
            text-shadow: rgb(255, 255, 255) 1px 0 10px;
                 
             }
-            @media (max-width: 320px) {
-              font-size: 1.3rem;
-             }
+            
         }
        
     }
@@ -140,7 +142,7 @@ header{
     padding-inline: 1rem;
     display: flex;
     justify-content: space-between;
-    @media (max-width: 640px) {
+    @media (max-width: 720px) {
       top: 80px;
      }
     .navIcon{
@@ -479,12 +481,14 @@ box-shadow: 0 15px 25px rgba(0,0,0,.6);
         display: flex;
         align-items: center;
         
-        /* @media (max-width: 640px) {
-          width: 90%;
-         } */
+       
          @media (max-width: 1024px) {
-          width: 80%;
+          width: 60%;
           margin-left: 5%;
+         }
+         @media (max-width: 640px) {
+          width: 80%;
+          
          }
         .desk{
             height: auto;

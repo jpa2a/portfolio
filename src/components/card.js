@@ -23,8 +23,20 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                             {js && <div className="jsLogo"><img src="./images/JavaScript.webp" alt="javascript"></img></div> }  
                             </div>
                             <div className="screenshots">
-                              <div className="desk" style={{scale: imageScale}}><img src={deskImg} alt="portfolio 1 desk"></img></div>
-                              <div className="mobile"><img src={mobileImg} alt="portfolio 1 mobile"></img></div>
+                              <div className="desk" style={{scale: imageScale}}>
+                                <picture>
+                                  <source srcset={`${deskImg}_640.webp`} media="(max-width: 640px)" />
+                                  <source srcset={`${deskImg}.webp`} media="all" />
+                                  <img src={`${deskImg}.webp`} alt="portfolio 1 desk"  loading="lazy" />
+                                </picture>    
+                              </div>
+                              <div className="mobile">
+                                <picture>
+                                  <source srcset={`${mobileImg}_640.webp`} media="(max-width: 640px)" />
+                                  <source srcset={`${mobileImg}.webp`} media="all" />
+                                  <img src={`${mobileImg}.webp`} alt="portfolio 1 mobile"  loading="lazy" />
+                                </picture>
+                              </div>
                             </div>
                             <div className="text">
                               <div className="title">
