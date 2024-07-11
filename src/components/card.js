@@ -3,6 +3,7 @@ import { useRef } from 'react';
 
 export function Card({title, description, deskImg, mobileImg, link, github,html, css, js, react, progress, range, targetScale}){
     
+    // Gestion de la taille des cartes en fonction de la progression sur l'axe Y
     const scale = useTransform(progress, range, [1, targetScale]);
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -17,10 +18,10 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                          <div className="portfolio" ref={container}>
                           <motion.div className="portfolio__card"  style={{scale}}>
                             <div className="logos">
-                            {html && <div className="htmlLogo"><img src="./images/HTML5.webp" alt="html"></img></div> }  
-                            {css && <div className="cssLogo"><img src="./images/css.webp" alt="css"></img></div> }  
-                            {react && <div className="reactLogo"><img src="./images/React.webp" alt="react"></img></div> }  
-                            {js && <div className="jsLogo"><img src="./images/JavaScript.webp" alt="javascript"></img></div> }  
+                              {html && <div className="htmlLogo"><img src="./images/HTML5.webp" alt="html"></img></div> }  
+                              {css && <div className="cssLogo"><img src="./images/css.webp" alt="css"></img></div> }  
+                              {react && <div className="reactLogo"><img src="./images/React.webp" alt="react"></img></div> }  
+                              {js && <div className="jsLogo"><img src="./images/JavaScript.webp" alt="javascript"></img></div> }  
                             </div>
                             <div className="screenshots">
                               <div className="desk" style={{scale: imageScale}}>
@@ -42,15 +43,15 @@ export function Card({title, description, deskImg, mobileImg, link, github,html,
                               <div className="title">
                                 <h2>Projet :</h2>
                                 <span>{title}</span>
-                                </div>
+                              </div>
                               <div className="description">
                                 <h2>Description :</h2>
                                 <span>{description}</span>
                                 </div>
                               <div className="link">
-                                
                                 {link.length > 0 && <a href={link} target="_blank"  rel="noreferrer">Lien site web</a> }
-                                {github.length >0 && <a href={github} target="_blank"  rel="noreferrer">Lien github</a> }</div>
+                                {github.length >0 && <a href={github} target="_blank"  rel="noreferrer">Lien github</a> }
+                              </div>
                             </div>
                              
                               
