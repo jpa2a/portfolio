@@ -78,25 +78,25 @@ export function Contact(){
             <div className="contact__nom">
                 <label for="nom">Nom</label>
                 <input name="nom" id="nom" {...register("nom", {required: "le nom doit etre renseigné", minLength: {value: 3, message: "le nom doit avoir au moins 3 caractères",},})} type="text" />
-                {errors.nom && <div className="form__error">{errors.nom.message}</div>}
+                  {errors.nom && <div className="form__error">{errors.nom.message}</div>}
             </div>
             <div className="contact__prenom">
                 <label for="prenom">Prenom</label>
                 <input name="prenom" id="prenom" {...register("prenom", {required: "le prénom doit etre renseigné", minLength: {value: 3, message: "le prenom doit avoir au moins 3 caractères",},})} type="text" />
-                {errors.prenom && <div className="form__error">{errors.prenom.message}</div>}
+                  {errors.prenom && <div className="form__error">{errors.prenom.message}</div>}
             </div>
             <div className="contact__email">
                 <label for="email">Email</label>
                 <input name="email" id="email" {...register("email", {required: "email obligatoire",pattern: {
-                    value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                    message: 'email addresse invalide',
+                  value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                  message: 'email addresse invalide',
                   },})} type="text" />
-                {errors.email && <div className="form__error">{errors.email.message}</div>}     
+                  {errors.email && <div className="form__error">{errors.email.message}</div>}     
             </div>
             <div className="contact__message">
                 <label for="message">Message</label>
                 <textarea name="message" id="message" {...register("message", {required: "un message est obligatoire", minLength: {value: 20, message: "le message doit avoir au moins 20 caractères",},})} rows="3" />
-                {errors.message && <div className="form__error">{errors.message.message}</div>}
+                  {errors.message && <div className="form__error">{errors.message.message}</div>}
             </div>
             <button disabled={isSubmitting} type="submit" className="contact__submit">{isSubmitting ? "Envoi ..." : "Envoyer"}</button>
           </form>
