@@ -412,12 +412,12 @@ function vignets(){
           </div>
           <ul class="card__user-links js-animatable">
             <li class="card__user-link">
-              <a href="https://tahazsh.com" alt="Blog">
+              <a href="" alt="Blog">
                 
               </a>
             </li>
             <li class="card__user-link">
-              <a href="https://twitter.com/tahazsh" alt="Twitter">
+              <a href="" alt="Twitter">
                </a>
             </li>
           </ul>
@@ -442,32 +442,32 @@ function vignets(){
       <div class="card__images js-animatable">
         <img
           class="card__image"
-          src="/assets/images/Gmail/1000010460.png"
+          src="assets/images/Gmail/1000010460.png"
           alt=""
         />
         <img
           class="card__image"
-          src="/assets/images/Gmail/1000010460.png"
+          src="assets/images/Gmail/1000010460.png"
           alt=""
         />
         <img
           class="card__image"
-          src="/assets/images/Gmail/1000010460.png"
+          src="assets/images/Gmail/1000010460.png"
           alt=""
         />
         <img
           class="card__image"
-          src="/assets/images/Gmail/1000010460.png"
+          src="assets/images/Gmail/1000010460.png"
           alt=""
         />
         <img
           class="card__image"
-          src="/assets/images/Gmail/1000010460.png"
+          src="assets/images/Gmail/1000010460.png"
           alt=""
         />
         <img
           class="card__image"
-          src="/assets/images/Gmail/1000010460.png"
+          src="assets/images/Gmail/1000010460.png"
           alt=""
         />
       </div>
